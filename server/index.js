@@ -1,6 +1,5 @@
 const app = require('express')();
 const server = require('http').createServer(app);
-const path = require('path');
 
 const PORT = 8000;
 
@@ -9,9 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/is-92-026', (req, res) => {
-  res.sendFile('student-response.html', {
-    root: path.join(__dirname, './public/'),
-  });
+  res.send('<h1>Bohdan Shybetskyi IS-92</h1>');
 });
 
 server.listen(PORT, () => {
